@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/puzzle-challenge/static/css/main.9c8ab0f4.css",
-    "main.js": "/puzzle-challenge/static/js/main.17eab5cb.js",
+    "main.js": "/puzzle-challenge/static/js/main.72b4fed7.js",
     "static/media/Frame 2.png": "/puzzle-challenge/static/media/Frame 2.556df5a1bca27a637051.png",
     "index.html": "/puzzle-challenge/index.html",
     "main.9c8ab0f4.css.map": "/puzzle-challenge/static/css/main.9c8ab0f4.css.map",
-    "main.17eab5cb.js.map": "/puzzle-challenge/static/js/main.17eab5cb.js.map"
+    "main.72b4fed7.js.map": "/puzzle-challenge/static/js/main.72b4fed7.js.map"
   },
   "entrypoints": [
     "static/css/main.9c8ab0f4.css",
-    "static/js/main.17eab5cb.js"
+    "static/js/main.72b4fed7.js"
   ]
 }
