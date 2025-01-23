@@ -212,7 +212,7 @@ const ProblemPage = ({
           <h3 className="font-mono font-thin" style={{ color: themeColors.text }}>
             Problem {problemNumber.toString().padStart(2, '0')}
           </h3>
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0 mb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold font-syne">{title}</h1>
             <div className="inline-flex rounded-lg bg-white/30 p-1 self-start sm:self-auto">
               <button 

@@ -253,7 +253,7 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
               </NavRippleButton>
             </div>
             <div className="mt-12 mx-6 md:mb-4 md:mt-auto border md:border-0 rounded-lg p-4 md:p-0 bg-[rgba(0,0,0,0.05)] md:bg-transparent" style={{ borderColor: `${colorThemes[selectedTheme].active}60` }}>
-              <div className="flex justify-evenly px-2">
+              <div className="flex justify-between px-2">
                 {colorThemes.map((theme, index) => (
                   <button
                     key={theme.name}
