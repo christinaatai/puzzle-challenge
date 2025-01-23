@@ -1,0 +1,18 @@
+
+.flash {
+  animation: flashAnimation 0.1s;
+}
+
+@keyframes flashAnimation {
+  0%, 100% {
+    color: rgb(249 168 212);
+  }
+
+  50% {
+    color: rgb(249 168 212); 
+  }
+}
+
+.min-height-calc {
+  min-height: calc(100vh-140px);
+}

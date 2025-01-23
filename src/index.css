@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Nunito Sans', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+  
