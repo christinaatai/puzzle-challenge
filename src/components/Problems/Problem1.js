@@ -55,7 +55,7 @@ const Problem1 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
           <div className="space-y-2">
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button 
-                className="w-full text-left font-medium focus:outline-none text-lg"
+                className="w-full text-lg text-left font-medium focus:outline-none text-lg"
                 onClick={() => toggleHint('hint1')}
               >
                 🔍 Hint 1
@@ -77,31 +77,31 @@ const Problem1 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('hint2')}
               >
                 🔍 Hint 2
               </button>
               <AccordionContent isOpen={openHints.has('hint2')}>
-                Each item uses an iconic font.
+                <div className="text-lg">Each item uses an iconic font.</div>
               </AccordionContent>
             </div>
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('hint3')}
               >
                 🔍 Hint 3
               </button>
               <AccordionContent isOpen={openHints.has('hint3')}>
-                Use the first letter of each font name to get the answer.
+                <div className="text-lg">Use the first letter of each font name to get the answer.</div>
               </AccordionContent>
             </div>
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('solution')}
               >
                 ⭐ Solution

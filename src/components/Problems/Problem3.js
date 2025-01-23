@@ -67,51 +67,53 @@ const Problem3 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('hint2')}
               >
                 🔍 Hint 2
               </button>
               <AccordionContent isOpen={openHints.has('hint2')}>
-                Each guideline has a number in the format (x.x). Both numbers are important.
+                <div className="text-lg">Each guideline has a number in the format (x.x). Both numbers are important.</div>
               </AccordionContent>
             </div>
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('solution')}
               >
                 ⭐ Solution
               </button>
               <AccordionContent isOpen={openHints.has('solution')}>
-                Each guideline has a number in the format (x.y).
-                <br /><br />
-                Use the first number to select one of the four main accessibility principles:
-                1 = Perceivable, 2 = Operable, 3 = Understandable, 4 = Robust.
-                <br/><br/>
-                Then, use the second number to pick a letter from that principle's name (e.g., 1 = first letter, 2 = second letter, and so on). Combine the letters from all the guidelines to find the answer.
+                <div className="text-lg">
+                  Each guideline has a number in the format (x.y).
+                  <br /><br />
+                  Use the first number to select one of the four main accessibility principles:
+                  1 = Perceivable, 2 = Operable, 3 = Understandable, 4 = Robust.
+                  <br/><br/>
+                  Then, use the second number to pick a letter from that principle's name (e.g., 1 = first letter, 2 = second letter, and so on). Combine the letters from all the guidelines to find the answer.
 
-                <br />
+                  <br />
 
-                provide text alternative → (1.1) → <span className="font-bold">P</span>erceivable
-                <br />
-                compatibility → (4.1) → <span className="font-bold">R</span>obust
-                <br />
-                keyboard accessible → (2.1) → <span className="font-bold">O</span>perable
-                <br />
-                input assistance → (3.3) → Un<span className="font-bold">d</span>erstandable
-                <br />
-                readable → (3.1) → <span className="font-bold">U</span>nderstandable               
-                 <br />
-                 distinguishable → (1.4) → Per<span className="font-bold">c</span>eivable
-                 <br />
-                 seizures → (2.3) → Op<span className="font-bold">e</span>rable               
-                 <br />
-                <br />
-                <span className="relative">
-                  Answer: <ObfuscatedAnswer encodedAnswer="cHJvZHVjZQ==" />
-                </span>
+                  provide text alternative → (1.1) → <span className="font-bold">P</span>erceivable
+                  <br />
+                  compatibility → (4.1) → <span className="font-bold">R</span>obust
+                  <br />
+                  keyboard accessible → (2.1) → <span className="font-bold">O</span>perable
+                  <br />
+                  input assistance → (3.3) → Un<span className="font-bold">d</span>erstandable
+                  <br />
+                  readable → (3.1) → <span className="font-bold">U</span>nderstandable               
+                  <br />
+                  distinguishable → (1.4) → Per<span className="font-bold">c</span>eivable
+                  <br />
+                  seizures → (2.3) → Op<span className="font-bold">e</span>rable               
+                  <br />
+                  <br />
+                  <span className="relative">
+                    Answer: <ObfuscatedAnswer encodedAnswer="cHJvZHVjZQ==" />
+                  </span>
+                </div>
               </AccordionContent>
             </div>
           </div>

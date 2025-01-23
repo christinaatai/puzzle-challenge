@@ -68,44 +68,46 @@ const Problem2 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('hint2')}
               >
                 🔍 Hint 2
               </button>
               <AccordionContent isOpen={openHints.has('hint2')}>
-                Use the first letter of each color name to get the answer.
+                <div className="text-lg">Use the first letter of each color name to get the answer.</div>
               </AccordionContent>
             </div>
 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('solution')}
               >
                 ⭐ Solution
               </button>
               <AccordionContent isOpen={openHints.has('solution')}>
-                After finding the color name that is used for each item, use the first letter of each color name to get the answer.
-                <br />
-                <br />
-                salmon
-                <br />
-                lime
-                <br />
-                orange
-                <br />
-                tomato
-                <br />
-                chocolate
-                <br />
-                honeydew
-                <br />
-                <br />
+                <div className="text-lg">
+                  After finding the color name that is used for each item, use the first letter of each color name to get the answer.
+                  <br />
+                  <br />
+                  salmon
+                  <br />
+                  lime
+                  <br />
+                  orange
+                  <br />
+                  tomato
+                  <br />
+                  chocolate
+                  <br />
+                  honeydew
+                  <br />
+                  <br />
 
-                <span className="relative">
-                  Answer: <ObfuscatedAnswer encodedAnswer="c3Bsb3RjaA==" />
-                </span>
+                  <span className="relative">
+                    Answer: <ObfuscatedAnswer encodedAnswer="c3Bsb3RjaA==" />
+                  </span>
+                </div>
               </AccordionContent>
             </div>
           </div>
