@@ -43,7 +43,7 @@ const HomePage = () => {
   });
 
   return (
-    <div className="max-w-2xl px-4 sm:px-12 mx-auto md:pl-12 md:pr-12 md:pr-0">
+    <div className="max-w-2xl px-8 sm:px-12 mx-auto md:pl-12 md:pr-12 md:pr-0">
       {trail.map((style, index) => {
         const item = items[index];
         return (

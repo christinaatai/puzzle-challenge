@@ -52,17 +52,17 @@ const Problem2 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
       themeColors={themeColors}
       hint={
         <div className="space-y-4">
-          <p className="text-base sm:text-lg pt-4">Here are some hints to help you solve this puzzle:</p>
+          <p className="text-lg pt-4">Here are some hints to help you solve this puzzle:</p>
           <div className="space-y-2">
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button 
-                className="w-full text-left font-medium focus:outline-none text-base sm:text-lg"
+                className="w-full text-left font-medium focus:outline-none text-lg"
                 onClick={() => toggleHint('hint1')}
               >
                 🔍 Hint 1
               </button>
               <AccordionContent isOpen={openHints.has('hint1')}>
-                <div className="text-base sm:text-lg">Modern browsers support 140 named colors.</div>
+                <div className="text-lg">Modern browsers support 140 named colors.</div>
               </AccordionContent>
             </div>
 

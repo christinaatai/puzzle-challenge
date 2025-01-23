@@ -245,7 +245,7 @@ const ProblemPage = ({
           {trails[1].map((style) => (
             <animated.div key="content" style={{ ...style, willChange: 'transform, opacity' }}>
               <br />
-              <div className="font-light text-base sm:text-lg">{children}</div>
+              <div className="font-light text-lg">{children}</div>
               <br />
             </animated.div>
           ))}
