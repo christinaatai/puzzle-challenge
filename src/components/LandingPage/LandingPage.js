@@ -116,7 +116,7 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
     
     if (newSolvedProblems.size === 3) {
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 10000);
+      setTimeout(() => setShowConfetti(false), 15000);
     }
   };
 
@@ -192,12 +192,12 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
           numberOfPieces={500}
           recycle={false}
           run={true}
-          gravity={0.2}
-          wind={0.05}
+          gravity={0.15}
+          wind={0.03}
           opacity={0.8}
-          tweenDuration={10000}
-          initialVelocityX={5}
-          initialVelocityY={-10}
+          tweenDuration={15000}
+          initialVelocityX={3}
+          initialVelocityY={-8}
           colors={[
             '#f44336', '#e91e63', '#9c27b0', '#673ab7',
             '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4',
@@ -214,11 +214,11 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
         <div className={`
           fixed top-0 left-0 right-0 bottom-0 md:left-12 md:right-auto rounded-none md:rounded-xl
           w-full md:w-64 bg-[${colorThemes[selectedTheme].from}] md:bg-[#FDFDFD]/30
-          shadow-[0_0_15px_rgba(255,255,255,0.05)] md:shadow-[0_0_15px_rgba(0,0,0,0.1)] md:p-4 md:my-12
+          shadow-[0_0_15px_rgba(255,255,255,0.05)] md:shadow-[0_0_15px_rgba(0,0,0,0.1)] md:p-4 md:mt-12
           ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} md:opacity-100 md:visible
           transition-opacity duration-150 ease-in-out md:transition-none z-40
           flex items-center justify-center md:block
-          md:max-h-[calc(100vh-6rem)]
+          md:h-[calc(100vh-6rem)]
           md:overflow-y-auto
         `}>
           <nav className="flex flex-col justify-center md:justify-between h-full w-full max-w-sm">
@@ -235,7 +235,7 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
                 onClick={() => handleProblemSelect('problem1')}
               >
                 Problem 1
-                {solvedProblems.has('problem1') && <span className="px-2" style={{ color: colorThemes[selectedTheme].active }}>✓</span>}
+                {solvedProblems.has('problem1') && <span className="pr-2 pl-4" style={{ color: colorThemes[selectedTheme].active }}>✓</span>}
               </NavRippleButton>
               <NavRippleButton 
                 className={`w-full p-2 py-4 mb-2 md:py-2 text-center md:text-left rounded flex items-center justify-center md:justify-between text-2xl md:text-base font-medium ${selectedProblem === 'problem2' ? 'md:bg-white/40' : 'md:hover:bg-white/20'}`}
@@ -249,10 +249,10 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
                 onClick={() => handleProblemSelect('problem3')}
               >
                 Problem 3
-                {solvedProblems.has('problem3') && <span className="mr-2" style={{ color: colorThemes[selectedTheme].active }}>✓</span>}
+                {solvedProblems.has('problem3') && <span className="pr-2 pl-4" style={{ color: colorThemes[selectedTheme].active }}>✓</span>}
               </NavRippleButton>
             </div>
-            <div className="my-12 md:mb-4 md:mt-auto border md:border-0 rounded-lg p-4 md:p-0 bg-[rgba(0,0,0,0.05)] md:bg-transparent" style={{ borderColor: `${colorThemes[selectedTheme].active}60` }}>
+            <div className="my-12 mx-6 md:mb-4 md:mt-auto border md:border-0 rounded-lg p-4 md:p-0 bg-[rgba(0,0,0,0.05)] md:bg-transparent" style={{ borderColor: `${colorThemes[selectedTheme].active}60` }}>
               <div className="flex justify-evenly px-2">
                 {colorThemes.map((theme, index) => (
                   <button
@@ -272,7 +272,7 @@ const LandingPage = ({ handleProblemCompletion = () => {} }) => {
             </div>
           </nav>
         </div>
-        <div className="flex-1 p-4 md:p-8 mt-20 md:mt-12 md:mr-12 md:mb-12 md:ml-80 overflow-y-auto">
+        <div className="flex-1 md:p-4 mt-20 md:mt-12 md:mr-6 md:mb-12 md:ml-80 overflow-y-auto rounded-xl text-lg sm:text-lg md:text-base">
           {renderContent()}
         </div>
       </div>

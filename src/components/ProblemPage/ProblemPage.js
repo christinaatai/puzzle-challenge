@@ -206,15 +206,15 @@ const ProblemPage = ({
   };
 
   return (
-    <div className="px-4 md:pl-16">
+    <div className="px-6 sm:px-16 md:pl-16">
       {trails[0].map((style) => (
         <animated.div key="header" style={{ ...style, willChange: 'transform, opacity' }}>
           <h3 className="font-mono font-thin" style={{ color: themeColors.text }}>
             Problem {problemNumber.toString().padStart(2, '0')}
           </h3>
-          <div className="flex flex-row justify-between items-center mb-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-0 mb-4">
             <h1 className="text-3xl md:text-4xl font-bold font-syne">{title}</h1>
-            <div className="inline-flex rounded-lg bg-white/30 p-1">
+            <div className="inline-flex rounded-lg bg-white/30 p-1 self-start sm:self-auto">
               <button 
                 className={`px-4 py-2 rounded-lg font-medium font-light`}
                 style={{
@@ -245,7 +245,7 @@ const ProblemPage = ({
           {trails[1].map((style) => (
             <animated.div key="content" style={{ ...style, willChange: 'transform, opacity' }}>
               <br />
-              <div className="font-light text-lg">{children}</div>
+              <div className="font-light text-base sm:text-lg">{children}</div>
               <br />
             </animated.div>
           ))}
@@ -299,7 +299,7 @@ const ProblemPage = ({
         </>
       ) : (
         <div className="space-y-4">
-          <div className="font-light text-lg">
+          <div className="font-light text-sm sm:text-base">
             {hint || "No hint available for this problem."}
           </div>
         </div>

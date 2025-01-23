@@ -51,26 +51,27 @@ const Problem1 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
       themeColors={themeColors}
       hint={
         <div className="space-y-4">
-          <br />
-          <p>Here are some hints to help you solve this puzzle:</p>
+          <p className="text-base sm:text-lg pt-4">Here are some hints to help you solve this puzzle:</p>
           <div className="space-y-2">
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button 
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-left font-medium focus:outline-none text-base sm:text-lg"
                 onClick={() => toggleHint('hint1')}
               >
                 🔍 Hint 1
               </button>
               <AccordionContent isOpen={openHints.has('hint1')}>
-                <span style={{ fontFamily: 'Helvetica' }}>nyc subway signage</span>
-                <br />
-                <span style={{ fontFamily: 'Impact' }}>memes</span>
-                <br />
-                <span style={{ fontFamily: 'Times New Roman' }}>scientific journals</span>
-                <br />
-                <span style={{ fontFamily: 'Courier' }}>film script</span>
-                <br />
-                <span style={{ fontFamily: 'Highway Gothic' }}>stop sign</span>
+                <div className="text-base sm:text-lg">
+                  <span style={{ fontFamily: 'Helvetica' }}>nyc subway signage</span>
+                  <br />
+                  <span style={{ fontFamily: 'Impact' }}>memes</span>
+                  <br />
+                  <span style={{ fontFamily: 'Times New Roman' }}>scientific journals</span>
+                  <br />
+                  <span style={{ fontFamily: 'Courier' }}>film script</span>
+                  <br />
+                  <span style={{ fontFamily: 'Highway Gothic' }}>stop sign</span>
+                </div>
               </AccordionContent>
             </div>
 

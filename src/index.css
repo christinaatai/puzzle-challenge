@@ -6,7 +6,7 @@
   html {
     font-family: 'Nunito Sans', system-ui, sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    @apply text-base md:text-lg;  /* 16px default and sm, 18px md */
   }
 }
   

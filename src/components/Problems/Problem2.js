@@ -2,6 +2,7 @@ import React from 'react';
 import ProblemPage from '../ProblemPage/ProblemPage';
 import { useSpring, animated } from '@react-spring/web';
 import ObfuscatedAnswer from '../ObfuscatedAnswer';
+import problem2Image from '../../images/Frame 2.png';
 
 const AccordionContent = ({ isOpen, children }) => {
   const contentAnimation = useSpring({
@@ -51,18 +52,17 @@ const Problem2 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
       themeColors={themeColors}
       hint={
         <div className="space-y-4">
-          <br />
-          <p>Here are some hints to help you solve this puzzle:</p>
+          <p className="text-base sm:text-lg pt-4">Here are some hints to help you solve this puzzle:</p>
           <div className="space-y-2">
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button 
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-left font-medium focus:outline-none text-base sm:text-lg"
                 onClick={() => toggleHint('hint1')}
               >
                 🔍 Hint 1
               </button>
               <AccordionContent isOpen={openHints.has('hint1')}>
-                Modern browsers support 140 named colors.
+                <div className="text-base sm:text-lg">Modern browsers support 140 named colors.</div>
               </AccordionContent>
             </div>
 
@@ -113,7 +113,7 @@ const Problem2 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
       }
     >
       <div>
-        <img src="/images/Frame 2.png" alt="Problem 2 visual" className="w-full rounded-lg" />
+        <img src={problem2Image} alt="Problem 2 visual" className="w-full rounded-lg" />
       </div>
     </ProblemPage>
   );

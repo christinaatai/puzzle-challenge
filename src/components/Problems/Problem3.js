@@ -51,18 +51,17 @@ const Problem3 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
       themeColors={themeColors}
       hint={
         <div className="space-y-4">
-          <br />
-          <p>Here are some hints to help you solve this puzzle:</p>
+          <p className="text-base sm:text-lg pt-4">Here are some hints to help you solve this puzzle:</p>
           <div className="space-y-2">
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button 
-                className="w-full text-left font-medium focus:outline-none"
+                className="w-full text-left font-medium focus:outline-none text-base sm:text-lg"
                 onClick={() => toggleHint('hint1')}
               >
                 🔍 Hint 1
               </button>
               <AccordionContent isOpen={openHints.has('hint1')}>
-                Each term refers to one of the 12 Web Content Accessibility Guidelines (WCAG).
+                <div className="text-base sm:text-lg">Each term refers to one of the 12 Web Content Accessibility Guidelines (WCAG).</div>
               </AccordionContent>
             </div>
 
