@@ -107,23 +107,25 @@ const Problem1 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
                 ⭐ Solution
               </button>
               <AccordionContent isOpen={openHints.has('solution')}>
-                After finding the font name that is used for each item, use the first letter of each font name to get the answer.
-                <br />
-                <br />
-                nyc subway signage → helvetica
-                <br />
-                memes → impact
-                <br />
-                scientific journals → times new roman
-                <br />
-                film script → courier
-                <br />
-                stop sign → highway gothic
-                <br />
-                <br />
-                <span className="relative">
-                  Answer: <ObfuscatedAnswer encodedAnswer="aGl0Y2g=" />
-                </span>
+                <div className="text-lg">
+                  After finding the font name that is used for each item, use the first letter of each font name to get the answer.
+                  <br />
+                  <br />
+                  nyc subway signage → helvetica
+                  <br />
+                  memes → impact
+                  <br />
+                  scientific journals → times new roman
+                  <br />
+                  film script → courier
+                  <br />
+                  stop sign → highway gothic
+                  <br />
+                  <br />
+                  <span className="relative">
+                    Answer: <ObfuscatedAnswer encodedAnswer="aGl0Y2g=" />
+                  </span>
+                </div>
               </AccordionContent>
             </div>
           </div>
