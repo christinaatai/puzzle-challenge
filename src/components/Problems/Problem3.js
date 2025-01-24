@@ -80,6 +80,30 @@ const Problem3 = ({ handleProblemCompletion, isSolved, savedAnswer, themeColors 
             <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
               <button
                 className="w-full text-lg text-left font-medium focus:outline-none"
+                onClick={() => toggleHint('hint3')}
+              >
+                🔍 Hint 3
+              </button>
+              <AccordionContent isOpen={openHints.has('hint3')}>
+                <div className="text-lg">The first number refers to one of the four main principles.</div>
+              </AccordionContent>
+            </div>
+
+            <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
+              <button
+                className="w-full text-lg text-left font-medium focus:outline-none"
+                onClick={() => toggleHint('hint4')}
+              >
+                🔍 Hint 4
+              </button>
+              <AccordionContent isOpen={openHints.has('hint4')}>
+                <div className="text-lg">The second number indicates which letter to take from the principle's name.</div>
+              </AccordionContent>
+            </div>
+
+            <div className="border rounded p-2" style={{ borderColor: `${themeColors.active}80` }}>
+              <button
+                className="w-full text-lg text-left font-medium focus:outline-none"
                 onClick={() => toggleHint('solution')}
               >
                 ⭐ Solution
